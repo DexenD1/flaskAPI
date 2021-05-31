@@ -13,13 +13,14 @@
      5. Copy the created _**key.json**_ into previously created Compute Engine
      6. Export an environment variable in the Compute Engine:
         _export GOOGLE_APPLICATION_CREDENTIALS="**KEY_PATH**"_
- 3. Build a Docker image (you should have Docker installed in your Compute Instance):
+ 3. Build a Docker image (you should have Docker installed in your Compute Instance: https://docs.docker.com/engine/install/ubuntu/):
      1. _cd flaskAPI_
      2. _sudo docker build -t flask-api-image ._
      3. _sudo docker run -p 80:5000 --name flask-api -d flask-api-image_
      4. _sudo docker ps_
- 5. Test the API:
-     1. _python3 test.py_
+ 4. Test the API:
+     1. Edit and configure variable values in this script:
+        _python3 test.py_
      2. Output example:
          *{
            "message": {
@@ -39,4 +40,4 @@
            },
            "status": "UP"
          }*
- 7. Done.
+ 5. Done.
